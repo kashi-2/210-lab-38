@@ -1,6 +1,7 @@
 // Specification file for the IntBinaryTree class
 #ifndef INTBINARYTREE_H
 #define INTBINARYTREE_H
+
 #include <string>
 #include <iostream>
 using namespace std;
@@ -38,7 +39,6 @@ public:
    // Public interface for inserting, searching, and removing nodes.
    void insertNode(string);
    bool searchNode(string);
-   void deleteNode(string, TreeNode *&);
    void remove(string);
 
    // Public wrappers for tree traversal functions.
@@ -46,11 +46,6 @@ public:
    void displayPreOrder() const    {  displayPreOrder(root); }
    void displayPostOrder() const   {  displayPostOrder(root); }
 };
-
-// Implementation file for the IntBinaryTree class
-#include <iostream>
-#include "IntBinaryTree.h"
-using namespace std;
 
 // insert accepts a TreeNode pointer and a pointer to a node.
 // The function inserts the node into the tree pointed to by 
